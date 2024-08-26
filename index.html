@@ -150,7 +150,7 @@
         allowOutsideClick: false,
         showConfirmButton: false,
         timerProgressBar: true,
-        imageHeight: 90,
+        imageHeight: 90
       });
       audio = new Audio("" + linkmp3.src);
       ftganti = 0;
@@ -174,7 +174,7 @@
       const swals = Swal.mixin({
         allowOutsideClick: false,
         cancelButtonColor: "#FF0040",
-        imageHeight: 80,
+        imageHeight: 80
       });
 
       document.getElementById("kadoIn").onclick = function () {
@@ -191,21 +191,24 @@
       };
 
       async function inipesan() {
-        var { value: nama } = await swals.fire({
-          title: "Masukin Nama Kamu",
-          input: "text",
-        });
-        if (nama && nama.length < 11) {
-          window.nama = nama;
-          vketikhalo = "Hai, " + nama + " ✨";
-          mulainama();
-        } else {
-          await swals.fire(
-            "Ups!",
-            "Nama tidak boleh kosong atau lebih dari 10 karakter, ya!"
-          );
-          inipesan();
-        }
+        // var { value: nama } = await swals.fire({
+        //   title: "Masukin Nama Kamu",
+        //   input: "text",
+        // });
+        // if (nama && nama.length < 11) {
+        //   window.nama = nama;
+        //   vketikhalo = "Hai, " + nama + " ✨";
+        //   mulainama();
+        // } else {
+        //   await swals.fire(
+        //     "Ups!",
+        //     "Nama tidak boleh kosong atau lebih dari 10 karakter, ya!"
+        //   );
+        //   inipesan();
+        // }
+        window.nama = "Uwiw";
+        vketikhalo = "Hai, " + nama + " ✨";
+        mulainama();
       }
 
       //Variable Pertanyaan Akhir
@@ -214,16 +217,16 @@
       var tompositif = "Mau";
       var tomnegatif = "Engga";
 
-      async function menuju() {
-        pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";
-        await swals.fire(
-          "OK!",
-          "Kirim jawabannya ke WhatsApp aku, ya!",
-          "success"
-        );
-        window.location =
-          "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
-      }
+      // async function menuju() {
+      //   pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";
+      //   await swals.fire(
+      //     "OK!",
+      //     "Kirim jawabannya ke WhatsApp aku, ya!",
+      //     "success"
+      //   );
+      //   window.location =
+      //     "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;
+      // }
     </script>
     <script src="https://malasid.github.io/html/hbd.js"></script>
     <!-- Sampai Sini -->
